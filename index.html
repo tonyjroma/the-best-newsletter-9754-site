@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converture Modern</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="logo">Converture Modern</div>
+    <nav class="nav">
+      <a href="#pieces">Pieces</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-img" src="images/hero.png" alt="">
+      <div class="hero-text">
+        <h1>Furniture that refuses to sit still.</h1>
+        <p>Mid‑century inspired pieces that fold, flip, lift, and expand to keep small spaces in motion.</p>
+        <a href="#newsletter" class="hero-cta">Get our newsletter</a>
+      </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section id="pieces" class="grid-section">
+      <h2>Six ways to bend a room</h2>
+      <p class="grid-intro">Alternating warm woods and playful retro color hits—each piece transforms when you need it to.</p>
+
+      <div class="grid">
+
+        <!-- 1 -->
+        <article class="card palette-warm">
+          <img src="images/desk.png" alt="Wall-mounted folding desk">
+          <h3>Wall‑mounted folding desk</h3>
+          <p>Folds flat when you’re done, reveals a built‑in monitor when you’re on. Walnut, brass, and a soft cream work surface.</p>
+        </article>
+
+        <!-- 2 -->
+        <article class="card palette-retro">
+          <img src="images/coffee-table.png" alt="Coffee table converting to dining table">
+          <h3>Coffee → dining table</h3>
+          <p>Low and quiet until dinner. Lifts to full dining height, with hidden drawers stocked with lobster bibs.</p>
+        </article>
+
+        <!-- 3 -->
+        <article class="card palette-warm">
+          <img src="images/storage-bench.png" alt="Storage bench that lifts into a hat rack">
+          <h3>Storage bench → hat rack</h3>
+          <p>Seat by day, entryway hero by night. The top lifts and locks into a vertical hat rack with hooks and a shelf.</p>
+        </article>
+
+        <!-- 4 -->
+        <article class="card palette-retro">
+          <img src="images/chair-stepstool.png" alt="Chair that converts into a step stool">
+          <h3>Chair → step stool</h3>
+          <p>A clean side chair that flips into a sturdy step stool when you need to reach the top shelf.</p>
+        </article>
+
+        <!-- 5 -->
+        <article class="card palette-warm">
+          <img src="images/nesting-tables.png" alt="Nesting tables with speakers">
+          <h3>Nesting tables with speakers</h3>
+          <p>Three nesting side tables with speakers built into their sides—separate them for surround sound, stack them when you’re done.</p>
+        </article>
+
+        <!-- 6 -->
+        <article class="card palette-retro">
+          <img src="images/console-table.png" alt="Expandable console table">
+          <h3>Expandable console table</h3>
+          <p>Lives as a slim hallway console, then pulls and folds out into a full dining or work surface.</p>
+        </article>
+
+        <!-- 7 — Newsletter Card -->
+        <article class="card newsletter-card" id="newsletter">
+          <h3>Want more ideas like these?</h3>
+          <p>One email, sometimes. New pieces, layout tricks, and ways to make 600 square feet feel like 1,200.</p>
+
+          <form id="newsletter-form" class="newsletter-form">
+            <div class="newsletter-row">
+              <input type="email" id="email" placeholder="you@example.com" required>
+              <button type="submit">Send me inspiration</button>
+            </div>
+            <p class="form-note" id="form-note"></p>
+          </form>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>© Converture Modern. Built in motion.</small>
+  </footer>
+
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const note = document.getElementById('form-note');
+
+      console.log("Conversion event fired:", email);
+
+      note.textContent = "Got it. When something bends in a new way, you’ll know.";
+    });
+  </script>
+
+</body>
+</html>
