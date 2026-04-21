@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Converture Modern</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.test.rebrandly.com/sdk/v1/rbly.min.js" data-api-key="407f4615c46b4c04a0797f0839ac870b"></script>
 </head>
 
 <body>
@@ -107,8 +106,6 @@
       e.preventDefault();
       const email = document.getElementById('email').value;
       const note = document.getElementById('form-note');
-
-      rbly.track('signup');
 
       console.log("Conversion event fired:", email);
 
