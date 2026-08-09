@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Converture Modern</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.rebrandly.com/analytics/sdk/v1/rbly.min.js" data-api-key="c679a18e67a64eaab40a7f7cf57c4959"></script>
+  <script src="https://cdn.rebrandly.com/analytics/sdk/v1/rbly.min.js" data-api-key="758c7cc0856c411d9290334c21719b2a"></script>
 </head>
 
 <body>
@@ -109,17 +109,9 @@
       const note = document.getElementById('form-note');
 
       console.log("Conversion event fired:", email);
+
       // Simple conversion (e.g., when user signs up)
 rbly.convert('signup');
-
-// Conversion with monetary value (e.g., purchase)
-rbly.convert('purchase', 99.99, 'USD', { orderId: 'ORDER-123' });
-
-// Custom event (not a conversion) — tracked separately
-rbly.track('newsletter_click', {
-  source: 'homepage',
-  placement: 'footer_cta'
-});
 
       note.textContent = "Got it. When something bends in a new way, you’ll know.";
     });
